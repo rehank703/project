@@ -1,241 +1,169 @@
-/* 🌍 Global Styles */
+/* General Styles */
 body {
-    background: url("college.webp");
-    background-position: center;
-    background-size: cover;
+    background: url("college.webp") no-repeat center center/cover;
     overflow-x: hidden;
     color: white;
-    text-align: center;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* 🖍️ Text Outline */
-.text-outline-stroke {
-    -webkit-text-stroke: 2px black;
-}
-
-/* 📢 Scrolling Text */
-.head {
-    font-size: 17px;
-    width: fit-content;
-    display: flex;
-    overflow: hidden;
-    border: 3px solid blue;
-    animation: head 9s infinite linear;
-    background-color: rgb(38, 104, 145);
-}
-
-@keyframes head {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-/* 🏫 Navbar */
+/* Navbar */
 nav {
     position: sticky;
     top: 0;
+    width: 100%;
+    background-color: rgba(6, 7, 7, 0.7);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 7px;
     z-index: 1000;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
-    background-color: #0607079f;
-    padding: 10px 20px;
-    border: 2px solid black;
-    border-radius: 7px;
-    outline: 2px solid black;
+    align-items: center;
 }
 
-/* 📌 Navigation List */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 15px;
-    font-size: 19px;
+    flex-wrap: wrap;
 }
 
-/* 📌 Navigation List Items */
 nav ul li {
-    margin: 0;
-    padding: 8px 10px;
-    white-space: nowrap;
+    margin-right: 15px;
+    padding: 5px;
     font-size: 18px;
-    text-align: center;
+    white-space: nowrap;
 }
 
-/* 🔹 College Name */
+/* Logo & Motto */
 #navi1 {
     position: relative;
     font-weight: bold;
 }
 
-/* 🔹 Tagline Below College Name */
 #navi1::after {
     content: "With you till you don't need us";
     font-size: 9px;
     position: absolute;
+    display: block;
     width: 100%;
     text-align: center;
     top: 100%;
     left: 0;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
-/* 🔥 Hover Effects */
-.navi {
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
+/* Animated Heading */
+.head {
+    font-size: 17px;
+    display: flex;
+    overflow: hidden;
+    border: 3px solid blue;
+    background-color: rgb(38, 104, 145);
+    animation: moveHead 9s infinite linear;
 }
 
-.navi:hover {
-    transform: translateY(-4px);
-    color: yellow;
+@keyframes moveHead {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
 }
 
-/* 🏛️ Main Title */
+/* Main Heading */
 .main {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     font-size: 60px;
     font-family: "Brush Script MT", cursive;
     border: 2px solid black;
-    -webkit-text-stroke: 1px black;
+    text-align: center;
+    width: 100%;
 }
 
-/* 🎓 Welcome Section */
+/* Welcome Section */
 .Welcome {
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    width: 100%;
     background-color: rgb(74, 138, 194);
     font-size: 18px;
-    padding: 15px;
+    text-align: center;
+    padding: 20px;
     border: 3px solid black;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
+    width: 100%;
 }
 
-/* 🏅 Choose Section */
+/* Why Choose Us Section */
 .choose {
     background-color: aquamarine;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 3px solid black;
+    padding: 10px;
     width: 100%;
-    height: fit-content;
     font-size: 19px;
     color: rgb(5, 0, 108);
-    padding: 15px;
 }
 
-/* 🌍 Vision Section */
+/* Vision Section */
 .vision {
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.681);
-    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
+    width: 100%;
 }
 
-/* 📌 Footer */
+/* Footer */
 .end {
-    display: flex;
     background-color: black;
-    justify-content: center;
+    text-align: center;
     font-size: 11px;
-    height: auto;
     padding: 10px;
 }
 
 .end ul {
     list-style: none;
-    margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
     font-size: 16px;
 }
 
-/* 📱 Responsive Design (Mobile ≤600px) */
-@media screen and (max-width: 600px) {
+/* Responsive Design */
+@media (max-width: 600px) {
     body {
         font-size: 12px;
-        padding: 10px;
-        background-size: contain;
+        padding: 5px;
     }
 
-    /* 🔹 Adjust Main Title */
-    .main {
-        font-size: 40px;
-    }
-
-    /* 🔹 Adjust Welcome Section */
-    .Welcome {
-        font-size: 14px;
-        height: auto;
-        padding: 10px;
-    }
-
-    /* 🔹 Adjust Choose Section */
-    .choose {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    /* 🔹 Stack Vision Section */
-    .vision {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    /* 🔹 Navbar Responsive */
     nav {
         flex-direction: column;
         align-items: center;
-        padding: 8px;
     }
 
     nav ul {
         flex-direction: column;
-        font-size: 16px;
-        width: 100%;
         align-items: center;
+        width: 100%;
+        text-align: center;
     }
 
     nav ul li {
-        font-size: 14px;
-        padding: 5px;
-    }
-
-    /* 🔹 Fix College Name & Tagline */
-    #navi1 {
+        padding: 10px;
         font-size: 16px;
+        width: 100%;
         text-align: center;
     }
 
-    #navi1::after {
-        font-size: 8px;
-        text-align: center;
-        top: 110%;
+    .main {
+        font-size: 40px;
     }
 
-    /* 🔹 Footer Responsive */
-    .end {
-        flex-direction: column;
-        font-size: 10px;
-    }
-
-    .end ul {
-        flex-direction: column;
-        text-align: center;
-        font-size: 12px;
+    .Welcome, .choose, .vision {
+        font-size: 16px;
+        padding: 15px;
     }
 }
