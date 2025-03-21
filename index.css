@@ -145,3 +145,24 @@ height: auto;
        font-size: 16px;
     
 }
+media (max-width: 600px) {
+    body {
+        font-size: 12px; /* Adjust text size */
+        padding: 10px;
+        nav {
+    position: sticky;
+    flex-wrap: wrap;
+    background-color: #0607079f;
+    padding: 13px;
+    border: 2px solid black;
+    
+    border-radius: 7px;
+    outline: 2px solid black;
+    top: 0;
+    z-index: 1000;
+    overflow: visible;
+            height: 15px;
+            
+        }
+    }}
+        
