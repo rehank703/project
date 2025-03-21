@@ -145,7 +145,7 @@ height: auto;
        font-size: 16px;
     
 }
-media (max-width: 600px) {
+@media (max-width: 600px) {
     body {
         font-size: 12px; /* Adjust text size */
         padding: 10px;
